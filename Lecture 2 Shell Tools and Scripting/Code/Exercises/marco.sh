@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+marco() {
+	#export MARCO=$(pwd)
+	echo "$(pwd)" > $HOME/marco_history.log
+	echo "save pwd $(pwd)"
+}
+
+polo() {
+	#cd "$MARCO"
+	cd "$(cat "$HOME/marco_history.log")"
+}
+
